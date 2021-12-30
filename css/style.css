@@ -1,0 +1,996 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+/* START HEADER SECTION  */
+header{
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ), url('../img/main1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Start Navbar  */
+.navbaritems{
+    background-color: #444444;
+    padding: 1.25rem 1.8rem;
+    transition: all 0.7s;
+}
+
+.lines1{
+    width: 13px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.5s;
+}
+
+.lines2{
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.5s;
+}
+
+.lines3{
+    width: 13px;
+    height: 3px;
+    margin: 5px;
+    
+    transform: translate(80%);
+
+    transition: all 0.5s;
+}
+
+.changes .lines1{
+    transform: rotate(45deg) translate(4px,2px);
+}
+
+.changes .lines2{
+    transform: rotate(-45deg);
+}
+
+.changes .lines3{
+    transform: rotate(45deg) translate(3px,-9px);
+}
+
+.navmenus{
+    color: #fff;
+
+    position: relative;
+}
+
+.navmenus:hover{
+    color: #E8B4B8;
+}
+
+.navcons.active:visited{
+    color: #fff;
+}
+
+.navmenus:hover::after{
+    transform: scale(1);
+}
+
+.navmenus::after{
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background-color: #FCB5AC;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: scale(0);  
+    transform-origin: left;
+
+    transition: all 0.8s;
+}
+/* End Navbar  */
+
+/* Start Banner  */
+.banners{
+    overflow: hidden;
+}
+
+.banners h1{
+    font-family: 'Sigmar One', cursive;
+    font-size: 4.45rem;
+    font-weight: bolder;
+
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: #fff; 
+
+    padding-left: 0.5rem;
+}
+
+.banners h1:hover{
+    -webkit-text-fill-color: #fff; 
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: #000; 
+}
+
+.banners h1,.banners p,.banners nav,.banners .socialicons{
+    animation: textani 2s;
+}
+
+@keyframes textani {
+    0%{
+        transform: translateX(-80%);
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+}
+
+.menuitems{
+    color: #fff;
+    font-size: 1.2rem;
+
+    position: relative;
+}
+
+.menuitems:hover{
+    color: #fff;
+}
+
+.menuitems.active:visited{
+    color: #fff;
+}
+
+.contactmenus:visited{
+    color: #fff;
+}
+
+.menuitems:hover::after,
+.menuitems.active::after{
+    transform: scale(0.4);
+}
+
+.menuitems::after{
+    content: '';
+    width: 100%;
+    height: 0.3rem;
+    background-color: #fff;
+
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+
+    transform: scale(0);  
+    transform-origin: left;
+
+    transition: all 0.8s;
+}
+
+.fab{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.9rem;
+    border-radius: 50%; 
+}
+
+/* End Banner  */
+/* END HEADER SECTION  */
+
+
+
+/* START PORTFOLIO SECTION  */
+.portfolioses{
+    background-color: #464033;
+}
+
+.card{
+    overflow: hidden;
+}
+
+.cardpros{
+    box-shadow: 0 0 20px #000;
+}
+
+.cardpros:hover{
+    box-shadow: 0 0 50px rgba(0,0,0,0.9);
+}
+
+.cardimgs{
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.cardimgs:hover{
+    animation: mycardimgs 0.8s ease forwards;
+}
+
+@keyframes mycardimgs{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+/* END PORTFOLIO SECTION  */
+
+
+
+/* START TEXT SECTION  */
+.ltexts{
+    font-family: 'Berkshire Swash', cursive;
+
+    font-size: 5rem;
+}
+/* END TEXT SECTION  */
+
+
+
+/* START ABOUT SECTION  */
+.cardinfos{
+    box-shadow: 0 0 25px #000;
+}
+
+.rabbons{
+    position: absolute;
+    bottom: 4%;
+    right: -10%;
+
+    transform: rotate(-30deg);
+}
+
+.cardcons{
+    position: relative;
+}
+
+.strights{
+    width: 0.2rem;
+    height: 62.5%;
+    background-color: #fff;
+
+    position: absolute;
+    top: 18%;
+    left: 5%;
+}
+
+.texts{
+    width: 100%;
+    background-color: transparent;
+}
+
+.circlebds1,
+.circlebds2,
+.circlebds3,
+.circlebds4,
+.circlebds5,
+.circlebds6{
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: grey;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 16%;
+    left: 3.1%;
+}
+
+.circlebds2{
+    top: 28.5%;
+}
+
+.circlebds3{
+    top: 40.5%;
+}
+
+.circlebds4{
+    top: 52.5%;
+}
+
+.circlebds5{
+    top: 65%;
+}
+
+.circlebds6{
+    top: 80%;
+}
+
+.circlebds1::before,
+.circlebds2::before,
+.circlebds3::before,
+.circlebds4::before,
+.circlebds5::before,
+.circlebds6::before{
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.texts:hover p{
+    cursor: pointer;
+}
+
+.texts:hover .circlebds1::before,
+.texts:hover .circlebds2::before,
+.texts:hover .circlebds3::before,
+.texts:hover .circlebds4::before,
+.texts:hover .circlebds5::before,
+.texts:hover .circlebds6::before{
+    background-color: #000;
+}
+
+.resumebtns:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+
+/* Start Animation Section  */
+.main-containers{
+    position: relative;
+}
+
+.bars{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+    
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+
+    opacity: 0;
+
+    z-index: 1;
+
+    animation: mybar 2.5s ease-out 2s;
+}
+
+@keyframes mybar{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.logocircles{
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    opacity: 0;
+
+    z-index: 1;
+
+    transform: translate(-50%,-50%);
+
+    animation: mycircle 3s ease-out 2s forwards;
+}
+
+@keyframes mycircle{
+    0%{
+        top: 100%;
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    30%{
+        top: 20%;
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    90%{
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(0.9);
+    }
+    100%{
+        top: 50%;
+        transform: translate(-50%,-50%) scale(0.3);
+        opacity: 0; 
+    }
+}
+
+
+.dots{
+    width: 9.5rem;
+    height: 9.5rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%) rotate(45deg);
+
+    z-index: 0;
+
+    animation: myrotate 1s linear 4s;
+}
+
+@keyframes myrotate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(1turn);
+    }
+}
+
+.dots img{
+    width: 2.5rem;
+    height: 2.5rem;
+
+    position: absolute;
+    opacity: 0;
+}
+
+.dots img:nth-child(1){
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    animation: myspan1 1s linear 4s forwards;
+}
+
+.dots img:nth-child(2){
+    top: 50%;
+    right: 50%;
+    
+    transform: translate(50%,-50%);
+
+    animation: myspan2 1s linear 4s forwards;
+}
+
+.dots img:nth-child(3){
+    bottom: 50%;
+    left: 50%;
+
+    transform: translate(-50%,50%);
+
+    animation: myspan3 1s linear 4s forwards;
+}
+
+.dots img:nth-child(4){
+    bottom: 50%;
+    right: 50%;
+    
+    transform: translate(50%,50%);
+
+    animation: myspan4 1s linear 4s forwards;
+}
+
+@keyframes myspan1{
+    0%{
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+    50%{
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+@keyframes myspan2{
+    0%{
+        top: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+    50%{
+        top: 0;
+        right: 0;
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+}
+
+@keyframes myspan3{
+    0%{
+        bottom: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+    50%{
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+    }
+    100%{
+        bottom: 50%;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+@keyframes myspan4{
+    0%{
+        bottom: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+    50%{
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+    }
+    100%{
+        bottom: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+}
+
+.aboutlogos{
+    width: 6.25rem;
+    height: 6.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    opacity: 0;
+
+    z-index: 1;
+
+    transform: translate(-50%,-50%);
+
+    animation: mylogo 3s ease-out 4.7s forwards;
+}
+
+@keyframes mylogo{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(3);
+    }
+}
+
+
+.flower-containers{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+}
+
+.flower-containers img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+/*1*/
+.flower-containers img:nth-child(1){
+    width: 1.25rem;
+    height: 1.25rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower1 10s ease-in-out 6.5s infinite;
+}
+
+@keyframes myflower1{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-1000%,-1000%);
+    }
+}
+
+/*2*/
+.flower-containers img:nth-child(2){
+    width: 1.8rem;
+    height: 1.8rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower2 10s ease-in-out 8.5s infinite;
+}
+
+@keyframes myflower2{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(1800%,-1500%);
+    }
+}
+
+/*3*/
+.flower-containers img:nth-child(3){
+    width: 3.2rem;
+    height: 3.2rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower3 10s ease-in-out 7.5s infinite;
+}
+
+@keyframes myflower3{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-2000%,-1500%);
+    }
+}
+
+/*4*/
+.flower-containers img:nth-child(4){
+    width: 2.2rem;
+    height: 2.2rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower4 10s ease-in-out 7.5s infinite;
+}
+
+@keyframes myflower4{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(2500%,-500%);
+    }
+}
+
+/*5*/
+.flower-containers img:nth-child(5){
+    width: 1.25rem;
+    height: 1.25rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower5 10s ease-in-out 8.5s infinite;
+}
+
+@keyframes myflower5{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-2500%,500%);
+    }
+}
+
+/*6*/
+.flower-containers img:nth-child(6){
+    width: 1.85rem;
+    height: 1.85rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower6 10s ease-in-out 6.5s infinite;
+}
+
+@keyframes myflower6{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-2500%,100%);
+    }
+}
+
+/*7*/
+.flower-containers img:nth-child(7){
+    width: 1.25rem;
+    height: 1.25rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower7 10s ease-in-out 8s infinite;
+}
+
+@keyframes myflower7{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(1500%,1000%);
+    }
+}
+
+/*8*/
+.flower-containers img:nth-child(8){
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower8 10s ease-in-out 7.5s infinite;
+}
+
+@keyframes myflower8{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-300%,1000%);
+    }
+}
+
+/*9*/
+.flower-containers img:nth-child(9){
+    width: 1.6rem;
+    height: 1.6rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower9 10s ease-in-out 8.5s infinite;
+}
+
+@keyframes myflower9{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-2000%,2500%);
+    }
+}
+
+/*10*/
+.flower-containers img:nth-child(10){
+    width: 2rem;
+    height: 2rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower10 10s ease-in-out 6.5s infinite;
+}
+
+@keyframes myflower10{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(1500%,1000%);
+    }
+}
+
+/*11*/
+.flower-containers img:nth-child(11){
+    width: 2.15rem;
+    height: 2.15rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower11 10s ease-in-out 7.5s infinite;
+}
+
+@keyframes myflower11{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(500%,1000%);
+    }
+}
+
+/*12*/
+.flower-containers img:nth-child(12){
+    width: 2.6rem;
+    height: 2.6rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower12 10s ease-in-out 6.5s infinite;
+}
+
+@keyframes myflower12{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-500%,-1000%);
+    }
+}
+
+/*13*/
+.flower-containers img:nth-child(13){
+    width: 2.55rem;
+    height: 2.55rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower13 10s ease-in-out 8.5s infinite;
+}
+
+@keyframes myflower13{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-500%,1000%);
+    }
+}
+
+/*14*/
+.flower-containers img:nth-child(14){
+    width: 2.1rem;
+    height: 2.1rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower14 10s ease-in-out 75s infinite;
+}
+
+@keyframes myflower14{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(1800%,800%);
+    }
+}
+
+/*15*/
+.flower-containers img:nth-child(15){
+    width: 2.25rem;
+    height: 2.25rem;
+
+    transform: translate(-50%,-50%);
+
+    animation: myflower15 10s ease-in-out 6.5s infinite;
+}
+
+@keyframes myflower15{
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-800%,1000%);
+    }
+}
+
+/* End Animation Section  */
+
+/* END ABOUT SECTION  */
+
+
+
+/* START CONTACT SECTION  */
+.contactboxes{
+    box-shadow: -10px 0px 50px rgb(29, 29, 29); 
+}
+
+.contactboxes p{
+    font-family: 'Mate SC', serif;
+    font-size: 2rem;
+}
+
+.contactboxes p:nth-of-type(2){
+    padding: 0 1rem;
+}
+
+.contactboxes p:nth-of-type(3){
+    padding: 0 2rem;
+}
+
+.contactlinks{
+    color: #fff;
+    margin: 1rem 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contactlinks:hover{
+    color: honeydew;
+    transform: scale(0.95);
+}
+
+.contactlinks.active:visited{
+    color: honeydew;
+}
+/* END CONTACT SECTION  */
+
+
+
+/* Start Floating Button Section  */
+.buttons{
+    box-shadow: 0 0 20px #000;
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+
+    opacity: 0;
+}
+
+.buttons.active{
+    opacity: 1;
+
+    animation: mybtn 0.5s linear infinite alternate;
+}
+
+@keyframes mybtn{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+/* End Floating Button Section  */
